@@ -99,3 +99,13 @@ test"un bolichito con un banquito en mostrador y una cajita de cobre con una pel
 	assert.notThat(bolichito.estaDesequilibrado())
 	assert.that(bolichito.tieneAlgoDeColor(naranja))
 }
+test"un bolichito con un banquito en mostrador y una cajita de cobre con un arito dentro en vidriera esta desequilibrado y tiene algo naranja"{
+	
+	bolichito.ponerEnMostrador(banquito)
+	bolichito.ponerEnVidriera(cajita)
+	
+	cajita.guardarObjeto(arito)
+	
+	assert.that(bolichito.estaDesequilibrado())
+	assert.that(bolichito.tieneAlgoDeColor(naranja))
+}
