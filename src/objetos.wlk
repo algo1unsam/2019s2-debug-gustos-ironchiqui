@@ -6,12 +6,55 @@ object pardo { method esFuerte() { return false } }
 object naranja{method esFuerte() { return true}}
 
 /* materiales */
-object cobre { method brilla() { return true } }
+object cobre { method brilla() { return true } method conduceElectricidad(){return true} }
 object vidrio { method brilla() { return true } }
 object lino { method brilla() { return false } }
 object madera { method brilla() { return false } }
 object cuero { method brilla() { return false } }
+object plomo {
+	
+	var _estado=natural
+	
+	method cambiarEstado(estado){
+		
+		_estado=estado
+}
+	
+	method estado(){return _estado}
+	method brilla(){
+		
+		return self.estado().brilla()
+			
+			
+		}
+		
 
+	method conduceElectricidad(){
+		
+		return _estado.conduceElectricidad()
+	}
+}
+
+/* estados */
+
+object natural{
+	
+	method brilla(){
+		return true
+	}
+	
+	method conduceElectricidad(){return false}
+}
+object cromado{
+	method brilla(){return true}
+	method conduceElectricidad(){return true}
+	
+}
+object oxidado{
+	
+	method brilla(){return false}
+	method conduceElectricidad(){return false}
+}
 /* objetos */
 object remera {
 	method color() { return rojo }
