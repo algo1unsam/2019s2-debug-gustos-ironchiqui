@@ -3,6 +3,7 @@ object rojo { method esFuerte() { return true } }
 object verde { method esFuerte() { return true } }
 object celeste { method esFuerte() { return false } } 
 object pardo { method esFuerte() { return false } }
+object naranja{method esFuerte() { return true}}
 
 /* materiales */
 object cobre { method brilla() { return true } }
@@ -50,6 +51,32 @@ object placa {
 	method setPeso(peso) { _peso = peso }
 }
 
+object arito{
+	
+	method color(){return celeste}
+	method materia(){return cobre}
+	method peso(){return 180}
+	
+}
+object banquito{
+	var _color=naranja
+	
+	method setColor(color){_color=color}
+	method material() {return madera}
+	method peso(){ return 1700}
+	
+}
+
+object cajita{
+	var objetoGuardado
+	var peso=400
+	
+	method color(){return rojo}
+	method guardarObjeto(objeto){objetoGuardado=objeto}
+	method peso(){ return peso + objetoGuardado.peso()}
+	
+	
+}
 
 
 
