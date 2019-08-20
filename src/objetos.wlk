@@ -61,6 +61,7 @@ object arito{
 object banquito{
 	var _color=naranja
 	
+	method color(){ return _color}
 	method setColor(color){_color=color}
 	method material() {return madera}
 	method peso(){ return 1700}

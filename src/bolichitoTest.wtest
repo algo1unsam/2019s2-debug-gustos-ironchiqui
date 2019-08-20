@@ -88,3 +88,14 @@ test "El bolichito con una remera y una pelota puede ofrecerle algo a Luisa" {
 	
 	assert.notThat(bolichito.puedeOfrecerleAlgoA(luisa))
 }
+
+test"un bolichito con un banquito en mostrador y una cajita de cobre con una pelota dentro en vidriera no esta desequilibrado y tiene algo naranja"{
+	
+	bolichito.ponerEnMostrador(banquito)
+	bolichito.ponerEnVidriera(cajita)
+	
+	cajita.guardarObjeto(pelota)
+	
+	assert.notThat(bolichito.estaDesequilibrado())
+	assert.that(bolichito.tieneAlgoDeColor(naranja))
+}
