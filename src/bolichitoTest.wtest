@@ -120,3 +120,9 @@ test"un bolichito con un banquito en mostrador de color verde y una cajita de co
 	assert.that(bolichito.estaDesequilibrado())
 	assert.notThat(bolichito.tieneAlgoDeColor(naranja))
 }
+
+
+/* falto test para probar pre post calcualo explicado en clase
+ "Hacer un test que pruebe una cajita de cobre con un muñeco que pesa 100,
+   entonces las caja pesa 500, si cambio el peso del muñeco a 400 entonces el peso total de la caja debería ser 800"
+*/
